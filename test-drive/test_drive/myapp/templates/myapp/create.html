@@ -1,0 +1,23 @@
+{% extends 'myapp/index.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Контактная информация</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.name }}
+        {{ form.phone_num }}<br>
+        {{ form.name_car }}
+        {{ form.mail }}
+        {{ form.task }}<br>
+        <button type="submit" class="btn btn-success">Добавить</button>
+        <span>{{ error }}</span>
+    </form>
+    <!--
+    <img src="https://alfagym.ru/wp-content/uploads/9/7/c/97cad33c345d4e9b5e60f84ef1e1e864.jpeg" width="500px">
+    <img src="https://www.vladtime.ru/uploads/posts/2018-05/1526892397_1.jpg" width="500px">
+    -->
+{% endblock %}
