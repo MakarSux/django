@@ -4,12 +4,7 @@ from .forms import TaskForm
 
 def index(request):
     tasks = Task.objects.all()
-    return render(request, 'myapp/general.html', {
-        'name': 'Имя',
-        'task': 'Комментарий',
-        'phone_num': 'Номер телефона',
-        'mail': 'Электронная почта',
-        'name_car': 'Название машины'})
+    return render(request, 'myapp/general.html', {'tasks': tasks})
 
 def about(request):
     return render(request, 'myapp/about.html')
