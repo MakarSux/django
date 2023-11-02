@@ -135,5 +135,5 @@ input, select{
     width: 289px;
     height: 42px;
     margin-left: 38px;
-    padding: 26px 0;
+    margin: 0 0 12px 30px;
 }
